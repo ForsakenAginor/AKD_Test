@@ -9,7 +9,7 @@ public class PlayerInitializer : MonoBehaviour
 
     private void Awake()
     {
-        PCPlayerInput playerInput = new PCPlayerInput();
+        IPlayerInput playerInput = new MobilePlayerInput();
         _playerMover.Init(playerInput);
         _playerRotator.Init(playerInput);
         _playerAnimationController.Init(playerInput, _playerCarrier);
